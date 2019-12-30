@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title%}BLOG POST{% endblock title%}
+
+
+{% block body%}
+<div class="container my-4">
+    
+
+<div class="col-md-8 blog-main">
+    
+
+    <div class="blog-post">
+      <h1 class="blog-post-title">{{post.title}}</h1>
+      <h6 class="blog-post-meta">{{post.timestamp}}&nbsp </h6><hr>
+      <p>
+        <div class="card" style="width: 18rem;">
+          <img src="{{post.image.url}}" class="card-img-top" alt="...">
+        </div>
+        <br>
+        {{post.content}}
+        <a href="{{post.link}}" target="_blank"> <h4>Click here {{post.title}}</h4></a>
+      </p>
+      
+     <hr>
+  </div>
+</div>
+</div>
+
+{%endblock body%}
